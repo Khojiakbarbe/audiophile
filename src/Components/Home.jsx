@@ -29,10 +29,29 @@ export default function Home() {
                         <button>See Product </button>
                     </div>
                     <div className="col-md-6">
-                        <img src={carousel}  alt="" />
+                        <img src={carousel} alt="" />
                     </div>
                 </div>
             </div>
+
+            <div className="menu">
+                <div className="row">
+                    {
+                        data && data.slice(2,5).map(post => {
+                            return (
+                                <div className="col-md-4">
+                                    <div className="card">
+                                        <img src={post.image.desktop} className='img-fluid' alt="" />
+                                        <p>{post.category}</p>
+                                        <span>shop </span>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+
         </>
     )
 }

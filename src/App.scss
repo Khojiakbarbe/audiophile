@@ -1,8 +1,8 @@
 .myCarousel {
   background-color: #0E0E0E;
   padding: 5%;
-  // font-family: 'Manrope';
   height: 100vh;
+  margin-bottom: 5%;
 }
 
 .myCarousel .row {
@@ -19,9 +19,11 @@
   padding-top: 1%;
   padding-bottom: 1%;
 }
-.myCarousel .row .col-md-6:nth-child(1){
+
+.myCarousel .row .col-md-6:nth-child(1) {
   padding-top: 5%;
 }
+
 .myCarousel .row h5 {
   color: gray;
   font-size: 150%;
@@ -37,25 +39,42 @@
 
 
 
+.menu .row {
+  padding: 5%;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.menu .row .col-md-4 .card{
+  border: none;
+  padding-bottom: 2%;
+  background-color: #F1F1F1
+}
+
 /////// FOOTER \\\\\\\
 
 
 
-.footer{
+.footer {
   width: 100%;
   background-color: black;
+  margin-top: 5%;
   padding: 5%;
 }
-.footer .row{
+
+.footer .row {
   width: 80%;
   margin: 0 auto;
 }
-.icons{
+
+.icons {
   width: 100%;
   text-align: end;
   padding-top: 20%;
 }
-.icon{
+
+.icon {
   font-size: 200%;
   color: white;
 }
