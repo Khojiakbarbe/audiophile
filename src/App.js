@@ -4,6 +4,7 @@ import Home from './Components/Home';
 
 import './App.scss';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

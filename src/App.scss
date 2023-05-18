@@ -1,5 +1,52 @@
-$h1COlor: red;
+.myCarousel {
+  background-color: #0E0E0E;
+  padding: 5%;
+  // font-family: 'Manrope';
+  height: 100vh;
+}
 
-h1 {
-  color: $h1COlor
+.myCarousel .row {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+
+.myCarousel .row button {
+  border-radius: 4px;
+  color: white;
+  background: #D87D4A;
+  padding: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.myCarousel .row .col-md-6:nth-child(1){
+  padding-top: 5%;
+}
+.myCarousel .row h5 {
+  color: gray;
+  font-size: 150%;
+}
+
+.myCarousel .row h1 {
+  font-size: 350%;
+}
+
+.myCarousel .row img {
+  width: 100%;
+}
+
+
+
+/////// FOOTER \\\\\\\
+
+
+
+.footer{
+  width: 100%;
+  background-color: black;
+  padding: 5%;
+}
+.footer .row{
+  width: 80%;
+  margin: 0 auto;
 }

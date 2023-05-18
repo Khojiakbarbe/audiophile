@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
+import carousel from '../images/home/Bitmap.png'
 
 
 export default function Home() {
@@ -19,7 +20,19 @@ export default function Home() {
 
     return (
         <>
-            <h1 className="btn btn-danger">Hii</h1>
+            <div className="myCarousel">
+                <div className="row">
+                    <div className="col-md-6">
+                        <h5>NEW PRODUCT</h5>
+                        <h1>XX99 Mark II <br /> Headphones</h1>
+                        <p>Experience natural, lifelike audio and exceptional <br /> build quality made for the passionate music <br /> enthusiast.</p>
+                        <button>See Product </button>
+                    </div>
+                    <div className="col-md-6">
+                        <img src={carousel}  alt="" />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
