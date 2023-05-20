@@ -27,7 +27,7 @@ export default function Home() {
                         <h5>NEW PRODUCT</h5>
                         <h1>XX99 Mark II <br /> Headphones</h1>
                         <p>Experience natural, lifelike audio and exceptional <br /> build quality made for the passionate music <br /> enthusiast.</p>
-                        <button>See Product </button>
+                        <button className="seeProductCategory" >See Product </button>
                     </div>
                     <div className="col-md-6">
                         <img src={carousel} alt="" />

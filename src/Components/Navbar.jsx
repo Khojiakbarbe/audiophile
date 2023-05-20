@@ -15,16 +15,16 @@ export default function Navbar() {
                 <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
 
-                    <h3><Link to='/' className="text-white"  > <strong>audiophile</strong></Link></h3>
+                    <h3><Link to='/'   > <strong>audiophile</strong></Link></h3>
                     <ul className="nav col-12 col-lg-auto me-lg-auto  mb-2 justify-content-center mb-md-0" style={{ width: '60%' }}>
-                        <li><Link to='/' className="nav-link px-2 text-white" >HOME</Link></li>
-                        <li><Link to='/category' className="nav-link px-2 text-white" onClick={() => {
+                        <li><Link to='/' className="nav-link px-2  navbarLinks" >HOME</Link></li>
+                        <li><Link to='/category' className="nav-link px-2  navbarLinks" onClick={() => {
                             setName('headphones')
                         }}>HEADPHONES</Link></li>
-                        <li><Link to='/category' className="nav-link px-2 text-white" onClick={() => {
+                        <li><Link to='/category' className="nav-link px-2  navbarLinks" onClick={() => {
                             setName('speakers')
                         }} >SPEAKERS</Link></li>
-                        <li><Link to='/category' className="nav-link px-2 text-white" onClick={() => {
+                        <li><Link to='/category' className="nav-link px-2  navbarLinks" onClick={() => {
                             setName('earphones')
                         }} >EARPHONES</Link></li>
                     </ul>

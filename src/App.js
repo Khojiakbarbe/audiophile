@@ -8,7 +8,7 @@ import Footer from './Components/Footer';
 import Categorys from './Components/Categorys';
 
 import { CategoryProvider } from './Components/DataProvider/DataContext'
-import Details from './Components/Details/Details';
+import Details from './Components/Details';
 
 function App() {
   return (

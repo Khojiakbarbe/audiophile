@@ -1,3 +1,17 @@
+//// NAVBAR \\\\
+*a{
+  color: white;
+}
+.navbarLinks{
+  color: white;
+}
+.navbarLinksL:hover{
+  color: #D87D4A;
+  transition: 0.5s;
+}
+
+
+//// HOME \\\\
 .myCarousel {
   background-color: #0E0E0E;
   padding: 5%;
@@ -11,14 +25,23 @@
   color: white;
 }
 
-.myCarousel .row button {
+
+
+.seeProductCategory {
   border-radius: 4px;
   color: white;
   background: #D87D4A;
   padding: 3%;
   padding-top: 1%;
   padding-bottom: 1%;
+  border: none;
 }
+
+.seeProductCategory:hover {
+  background-color: #FBAF85;
+  transition: 0.5s;
+}
+
 
 .myCarousel .row .col-md-6:nth-child(1) {
   padding-top: 5%;
@@ -113,9 +136,10 @@
   padding-top: 5%;
 }
 
-.bringing{
+.bringing {
   margin-top: 10%;
 }
+
 .bringing .row .col-md-6:nth-child(1) {
   padding-top: 10%;
   font-size: 120%;
@@ -126,13 +150,14 @@
   font-size: 300%;
   margin-bottom: 2%;
 }
-.bringing .row .col-md-6:nth-child(2) img{
+
+.bringing .row .col-md-6:nth-child(2) img {
   width: 100%;
 }
 
 ////// CATEGIRY \\\\
 
-.category{
+.category {
   background-color: black;
   color: white;
   text-align: center;
@@ -140,13 +165,22 @@
   text-transform: uppercase;
   margin-bottom: 3%;
 }
+.categoryRow{
+  width: 90%;
+  margin: 0 auto;
+}
+.categoryRow h1{
+  padding-top: 5%;
+}
 
+.categoryRow .col-md-6 img{
+  width: 90%;
+}
 
 /////// FOOTER \\\\\\\
 
-
-
 .footer {
+  margin-top: 100vw;
   width: 100%;
   background-color: black;
   margin-top: 5%;
