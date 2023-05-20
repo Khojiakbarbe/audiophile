@@ -18,7 +18,6 @@ export default function Home() {
             .catch(err => console.log(err))
     }, [])
 
-    console.log(data);
 
     return (
         <>
@@ -41,7 +40,7 @@ export default function Home() {
                     {
                         data && data.slice(2, 5).map(post => {
                             return (
-                                <div className="col-md-4">
+                                <div className="col-md-4" key={post.id}>
                                     <div className="card">
                                         <img src={post.image.desktop} className='img-fluid' alt="" />
                                         <p>{post.category}</p>

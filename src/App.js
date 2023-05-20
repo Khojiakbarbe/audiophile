@@ -8,6 +8,7 @@ import Footer from './Components/Footer';
 import Categorys from './Components/Categorys';
 
 import { CategoryProvider } from './Components/DataProvider/DataContext'
+import Details from './Components/Details/Details';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/category' element={<Categorys />} />
+          <Route path='/category/:id' element={<Details />} />
         </Routes>
         <Footer />
       </CategoryProvider>
