@@ -2,11 +2,9 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 
 import carousel from '../images/home/Bitmap.png'
-import bg from '../images/home/bg.png'
 import speaker1 from '../images/home/speakerZX9.png'
-import speaker2 from '../images/home/speakerZX7.png'
 import earphone from '../images/home/earphone.png'
-
+import boy from '../images/home/boy.png'
 
 export default function Home() {
 
@@ -74,7 +72,6 @@ export default function Home() {
                             <h1>ZX9 <br /> SPEAKER</h1>
                             <button className="seeProduct">SEE PRODUCT</button>
                         </div>
-                        {/* <img src={speaker2} className='w-100' alt="" /> */}
                     </div>
                 </div>
                 <div className="row mt-5 mb-5 earphone">
@@ -84,6 +81,17 @@ export default function Home() {
                     <div className="col-md-6">
                         <h1>YX1 EARPHONES</h1>
                         <button className="seeProduct">SEE PRODUCT</button>
+                    </div>
+                </div>
+                <div className="bringing">
+                    <div className="row w-100">
+                        <div className="col-md-6">
+                            <h1>Bringing you the <br /> <span style={{color:'#D87D4A'}}>best</span> audio gear</h1>
+                            <p>Located at the heart of New York City, Audiophile is the premier <br /> store for high end headphones, earphones, speakers, and audio <br /> accessories. We have a large showroom and luxury <br /> demonstration rooms available for you to browse and <br /> experience a wide range of our products. Stop by our store to <br /> meet some of the fantastic people who make Audiophile the <br /> best place to buy your portable audio equipment.</p>
+                        </div>
+                        <div className="col-md-6">
+                            <img src={boy} alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
