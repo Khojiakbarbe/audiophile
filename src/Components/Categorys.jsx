@@ -31,9 +31,9 @@ export default function Categorys() {
 
     return (
         <>
-            <h1>Categorys : {category}</h1>
-
-            <hr />
+            <div className="category">
+                <h1>{category}</h1>
+            </div>
 
             {filter[0] && filter[0].map((post, index) => {
                 return (
@@ -42,20 +42,20 @@ export default function Categorys() {
                             index % 2 == 0 ?
 
                                 <div >
-                                    <div className="row w-100 border">
+                                    <div className="row w-100 ">
                                         <div className="col-md-6 pt-5">
                                             <h1>{post.name}</h1>
                                             <p>{post.description}</p>
                                             <button className="seeProduct" onClick={() => navigate(`/category/${post.id}`)}>SEE PRODUCT</button>
                                         </div>
                                         <div className="col-md-6">
-                                            <img src={post.image.desktop} className='img-fluid w-50' alt="" />
+                                            <img src={post.image.desktop} className='img-fluid w-50 ' alt="" />
                                         </div>
                                     </div>
                                 </div>
                                 :
                                 <div >
-                                    <div className="row w-100 border">
+                                    <div className="row w-100 ">
                                         <div className="col-md-6">
                                             <img src={post.image.desktop} className='img-fluid w-50' alt="" />
                                         </div>
