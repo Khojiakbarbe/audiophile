@@ -23,12 +23,13 @@ export default function Details() {
 
     const [count, setCount] = useState(0)
 
+    const img = detail.image;
 
     return (
         <div className="container mt-5 pt-5">
             <div className="row w-100">
                 <div className="col-md-6">
-                    <img src={detail.image} alt="" />
+                    <img src={img} alt="" />
                 </div>
                 <div className="col-md-6">
                     {
