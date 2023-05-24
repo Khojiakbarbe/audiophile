@@ -1,13 +1,19 @@
 //// NAVBAR \\\\
-*a{
+*a {
   color: white;
 }
-.navbarLinks{
+
+.navbarLinks {
   color: white;
 }
-.navbarLinksL:hover{
+
+.navbarLinksL:hover {
   color: #D87D4A;
   transition: 0.5s;
+}
+
+.chestList {
+  background-color: white;
 }
 
 
@@ -165,15 +171,17 @@
   text-transform: uppercase;
   margin-bottom: 3%;
 }
-.categoryRow{
+
+.categoryRow {
   width: 90%;
   margin: 0 auto;
 }
-.categoryRow h1{
+
+.categoryRow h1 {
   padding-top: 5%;
 }
 
-.categoryRow .col-md-6 img{
+.categoryRow .col-md-6 img {
   width: 90%;
 }
 

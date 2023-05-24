@@ -1,13 +1,27 @@
 import { Link } from 'react-router-dom'
 import chest from '../images/navbar/chest.png'
 
-import { useContext } from 'react'
-import { categoryContext } from './DataProvider/DataContext'
+import { useContext } from 'react';
+import { categoryContext } from './DataProvider/DataContext';
+import { useState } from 'react';
 
 
 export default function Navbar() {
 
     const [name, setName] = useContext(categoryContext)
+
+
+    const [chestList, setChestList] = useState(false);
+
+
+
+    const body = document.body;
+
+    if (chestList) {
+        body.onclick = function () {
+            setChestList(false)
+        }
+    }
 
     return (
         <header className="p-3 " style={{ backgroundColor: '#0E0E0E' }}>
@@ -31,10 +45,18 @@ export default function Navbar() {
 
 
                     <div className="text-end">
-                        <button style={{ backgroundColor: 'unset', border: 'none' }}><img src={chest} className='img-fluid' alt="" /></button>
+                        <button onClick={() => setChestList(true)} style={{ backgroundColor: 'unset', border: 'none' }}><img src={chest} className='img-fluid chest' alt="" /></button>
                     </div>
-
+                    {
+                        chestList ?
+                            <div onMouseLeave={() => setChestList(false)} className='chestList bg-white'>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia ad natus exercitationem necessitatibus sint nobis molestiae beatae ducimus nemo nihil, minus veniam harum sed repellat!
+                            </div>
+                            :
+                            null
+                    }
                 </div>
+
             </div>
         </header>
     )

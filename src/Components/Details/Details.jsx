@@ -16,7 +16,6 @@ export default function Details() {
         axios.get('http://localhost:9000/audiophile/' + id)
             .then(res => {
                 setDetail(res.data)
-                console.log(res.data);
             })
             .catch(err => console.log(err))
     }, [])
