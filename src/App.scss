@@ -14,6 +14,17 @@
 
 .chestList {
   background-color: white;
+  // display: none;
+
+}
+
+.chest:hover+.chestList {
+  display: block;
+  transition: 0.5s;
+}
+
+body:hover+.chestList {
+  display: none;
 }
 
 
@@ -58,9 +69,6 @@
   font-size: 150%;
 }
 
-.myCarousel .row h1 {
-  font-size: 350%;
-}
 
 .myCarousel .row img {
   width: 100%;
@@ -210,4 +218,24 @@
 .icon {
   font-size: 200%;
   color: white;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 880px) {
+
+  .myCarousel .row .col-md-6:nth-child(2) {
+    text-align: center;
+  }
+  .myCarousel .row h1 {
+    font-size: 150%;
+  }
+
+  .myCarousel .row img {
+    width: 70%;
+    margin-bottom: 10%;
+  }
 }

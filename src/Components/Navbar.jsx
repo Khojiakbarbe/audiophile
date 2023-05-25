@@ -17,10 +17,12 @@ export default function Navbar() {
 
     const body = document.body;
 
+    console.log(document);
     if (chestList) {
-        body.onclick = function () {
-            setChestList(false)
-        }
+        // body.onclick = function () {
+        //     // setChestList(false)
+        //     console.log('hello');
+        // }
     }
 
     return (
@@ -44,17 +46,29 @@ export default function Navbar() {
                     </ul>
 
 
-                    <div className="text-end">
-                        <button onClick={() => setChestList(true)} style={{ backgroundColor: 'unset', border: 'none' }}><img src={chest} className='img-fluid chest' alt="" /></button>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src={chest} className='img-fluid' alt="" />
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"/></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    {/* <div className="text-end">
+                        <button onMouseMove={() => setChestList(true)}  onClick={() => setChestList(true)} onMouseLeave={() => setChestList(false)} style={{ backgroundColor: 'unset', border: 'none' }}><img src={chest} className='img-fluid chest' alt="" /></button>
                     </div>
                     {
                         chestList ?
-                            <div onMouseLeave={() => setChestList(false)} className='chestList bg-white'>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia ad natus exercitationem necessitatibus sint nobis molestiae beatae ducimus nemo nihil, minus veniam harum sed repellat!
+                            <div  className='chestList' onMouseLeave={() => setChestList(false)}>
+                                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum nihil quos laudantium.</p>
                             </div>
                             :
                             null
-                    }
+                    } */}
                 </div>
 
             </div>
