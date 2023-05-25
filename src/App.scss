@@ -12,19 +12,34 @@
   transition: 0.5s;
 }
 
-.chestList {
-  background-color: white;
-  // display: none;
 
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.chest:hover+.chestList {
-  display: block;
-  transition: 0.5s;
-}
-
-body:hover+.chestList {
+.dropdown-content {
   display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 50vh;
+  right: 0%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media only screen and (max-width: 415px) {
+  .dropdown-content {
+    left: -750%;
+    width: 250px;
+    font-size: 30%;
+  }
 }
 
 
@@ -193,6 +208,9 @@ body:hover+.chestList {
   width: 90%;
 }
 
+
+
+
 /////// FOOTER \\\\\\\
 
 .footer {
@@ -230,6 +248,7 @@ body:hover+.chestList {
   .myCarousel .row .col-md-6:nth-child(2) {
     text-align: center;
   }
+
   .myCarousel .row h1 {
     font-size: 150%;
   }
@@ -238,4 +257,5 @@ body:hover+.chestList {
     width: 70%;
     margin-bottom: 10%;
   }
+
 }
