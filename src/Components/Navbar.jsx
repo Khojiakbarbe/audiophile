@@ -11,8 +11,6 @@ export default function Navbar() {
     const [name, setName] = useContext(categoryContext)
 
 
-    const [chestList, setChestList] = useState(false);
-
 
 
     return (
@@ -23,7 +21,6 @@ export default function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                   
                     <ul className="nav col-12 col-lg-auto me-lg-auto  mb-2 justify-content-center mb-md-0" style={{ width: '60%' }}>
                         <li><Link to='/' className="nav-link px-2  navbarLinks" >HOME</Link></li>
                         <li><Link to='/category' className="nav-link px-2  navbarLinks" onClick={() => {
@@ -36,8 +33,6 @@ export default function Navbar() {
                             setName('earphones')
                         }} >EARPHONES</Link></li>
                     </ul>
-
-
                     <div className="dropdown">
                         <img src={chest} alt="" />
                         <div className="dropdown-content">
