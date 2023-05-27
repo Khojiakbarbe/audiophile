@@ -13,4 +13,18 @@ export function CategoryProvider(props) {
         </categoryContext.Provider>
     )
 
+};
+
+export const productsContext = createContext();
+
+export function ProductsProvider(props){
+    const[product , setProduct] = useState([]);
+
+    return(
+        <productsContext.Provider>
+            {props.children}
+        </productsContext.Provider>
+    )
+
 }
+
