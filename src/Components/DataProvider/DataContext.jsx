@@ -21,7 +21,7 @@ export function ProductsProvider(props){
     const[product , setProduct] = useState([]);
 
     return(
-        <productsContext.Provider>
+        <productsContext.Provider value={[product,setProduct]}>
             {props.children}
         </productsContext.Provider>
     )

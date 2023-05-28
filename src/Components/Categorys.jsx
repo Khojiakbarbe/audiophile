@@ -18,7 +18,7 @@ export default function Categorys() {
     useEffect(() => {
         axios.get('http://localhost:9000/audiophile')
             .then(res => {
-                setInfo(res.data)
+                setInfo(res.data);
             })
             .catch(err => console.warn(err))
 

@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useParams } from 'react-router-dom'
+
+import { productsContext } from "../DataProvider/DataContext";
 
 import boy from '../../images/home/boy.png'
 
@@ -20,9 +22,43 @@ export default function Details() {
             .catch(err => console.log(err))
     }, [])
 
-    const [count, setCount] = useState(0)
+
+    const [products, setProducts] = useContext(productsContext);
+
+    // const [mycount,setCounts] = useState(0)
+    const [count, setCount] = useState(0);
+
+
+    const [productIndex, setProductIndex] = useState(0);
+    // for(let i = 0; i < products.length; i++){
+    //     if(products[i].id == id){
+    //         setCounts(products[i].count)
+    //     }
+    // }
+
+    // console.log(mycount);
 
     const img = detail.image;
+
+    const filter = products.filter(product => product.id == id);
+    if(filter.length == 1){
+        console.log(filter[0].count);
+        // setCount(filter[0].count)
+    }
+    console.log(filter);
+    function addCard() {
+        if (filter.length == 1) {
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].id == id) {
+                    products[i].count = count
+                }
+            }
+        } else {
+            products.push({ id: id, count: count })
+        }
+        console.log(products);
+    }
+
 
     return (
         <div className="container mt-5 pt-5">
@@ -45,7 +81,7 @@ export default function Details() {
                             <p style={{ display: 'flex', justifyContent: 'space-around', backgroundColor: '#F1F1F1' }}><span className="btn" onClick={() => { count != 0 ? setCount(count - 1) : setCount(0) }}>-</span><span>{count}</span><span className="btn" onClick={() => setCount(count + 1)}>+</span></p>
                         </div>
                         <div className="col-md-8">
-                            <button className="btn btn-warning">ADD TO CARD</button>
+                            <button onClick={() => addCard()} className="btn btn-warning">ADD TO CARD</button>
                         </div>
                     </div>
                 </div>
