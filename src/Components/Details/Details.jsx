@@ -28,14 +28,14 @@ export default function Details() {
     // const [mycount,setCounts] = useState(0)
     const [count, setCount] = useState(0);
 
-    let a = 0;
-    const filter = products.filter(product => product.id == id);
-    if (filter.length == 1) {
-        a = filter[0].count
-    };
+    // let a = 0;
+    // if (filter.length == 1) {
+    //     a = filter[0].count
+    // };
 
 
     function addCard() {
+        const filter = products.filter(product => product.id == id);
         if (filter.length == 1) {
             for (let i = 0; i < products.length; i++) {
                 if (products[i].id == id) {
@@ -45,7 +45,6 @@ export default function Details() {
         } else {
             products.push({ id: id, count: count })
         }
-        console.log(products);
     }
 
 

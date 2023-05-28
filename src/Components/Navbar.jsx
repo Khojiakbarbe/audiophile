@@ -24,11 +24,22 @@ export default function Navbar() {
         for (let i = 0; i < productsCon.length; i++) {
             const filter = data.filter(find => find.id == productsCon[i].id)
             if (filter) {
-                filtered.push(filter)
+                filtered.push({ data: filter, count: productsCon[i].count })
             }
         }
     }
-    console.log(filtered)
+
+    const [allPrice, setAllPrice] = useState(0);
+    function prices() {
+        if (filtered.length > 0) {
+            for (let i = 0; i < filtered.length; i++) {
+                // setAllPrice(filtered[i].data)
+                // console.log(filtered[i].data[0].price);
+            }
+        }
+    }
+
+    console.log(allPrice);
 
     return (
         <nav className="navbar navbar-expand-md bg-dark">
@@ -52,10 +63,33 @@ export default function Navbar() {
                     </ul>
                     <div className="dropdown">
                         <img src={chest} alt="" />
-                        <div className="dropdown-content">
-                            <h1>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, officia temporibus ullam numquam delectus a.
-                            </h1>
+                        <div className="dropdown-content" onClick={() => prices()} >
+                            {
+                                filtered.length > 0 ?
+                                    <>
+                                        <h5 >CART ({filtered.length})    <span onClick={() => setProductsCon([])}>Remove All</span></h5>
+                                        {filtered.map(post => {
+                                            return (
+                                                <div className='card p-1 row'>
+                                                    <div className="col-6">
+                                                        <img src={post.data[0].image.mobile} width='50' alt="" />
+                                                        <h5>{post.data[0].name}</h5>
+                                                        <h5>${post.data[0].price}</h5>
+                                                    </div>
+                                                    <div className="col-6">
+                                                        <h6>{post.count}</h6>
+                                                        {
+                                                            // console.log(post.data[0].price * post.count)
+                                                            // setAllPrice(allPrice = allPrice + (post.data[0].price * post.count))
+                                                        }
+                                                    </div>
+                                                </div>
+                                            )
+                                        })}
+                                    </>
+                                    :
+                                    <h1>Hechnarsa tanlanmagan...</h1>
+                            }
                         </div>
                     </div>
                 </div>
