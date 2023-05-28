@@ -28,24 +28,13 @@ export default function Details() {
     // const [mycount,setCounts] = useState(0)
     const [count, setCount] = useState(0);
 
-
-    const [productIndex, setProductIndex] = useState(0);
-    // for(let i = 0; i < products.length; i++){
-    //     if(products[i].id == id){
-    //         setCounts(products[i].count)
-    //     }
-    // }
-
-    // console.log(mycount);
-
-    const img = detail.image;
-
+    let a = 0;
     const filter = products.filter(product => product.id == id);
-    if(filter.length == 1){
-        console.log(filter[0].count);
-        // setCount(filter[0].count)
-    }
-    console.log(filter);
+    if (filter.length == 1) {
+        a = filter[0].count
+    };
+
+
     function addCard() {
         if (filter.length == 1) {
             for (let i = 0; i < products.length; i++) {
@@ -64,7 +53,7 @@ export default function Details() {
         <div className="container mt-5 pt-5">
             <div className="row w-100">
                 <div className="col-md-6">
-                    <img src={img} alt="" />
+                    <img src={detail.image} alt="" />
                 </div>
                 <div className="col-md-6">
                     {

@@ -1,17 +1,34 @@
 import { Link } from 'react-router-dom'
 import chest from '../images/navbar/chest.png'
 
-import { useContext } from 'react';
-import { categoryContext } from './DataProvider/DataContext';
-import { useState } from 'react';
-
+import { useContext, useState, useEffect } from 'react';
+import { categoryContext, productsContext } from './DataProvider/DataContext';
+import axios from 'axios'
 
 export default function Navbar() {
 
     const [name, setName] = useContext(categoryContext)
 
+    const [productsCon, setProductsCon] = useContext(productsContext);
+    const [data, setData] = useState([]);
 
-
+    useEffect(() => {
+        axios.get('http://localhost:9000/audiophile')
+            .then(res => {
+                setData(res.data)
+            })
+            .catch(err => console.log(err))
+    }, [])
+    const filtered = [];
+    if (productsCon.length > 0) {
+        for (let i = 0; i < productsCon.length; i++) {
+            const filter = data.filter(find => find.id == productsCon[i].id)
+            if (filter) {
+                filtered.push(filter)
+            }
+        }
+    }
+    console.log(filtered)
 
     return (
         <nav className="navbar navbar-expand-md bg-dark">
