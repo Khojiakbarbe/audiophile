@@ -31,15 +31,19 @@ export default function Navbar() {
 
     const [allPrice, setAllPrice] = useState(0);
     function prices() {
+        // setAllPrice(0)
         if (filtered.length > 0) {
             for (let i = 0; i < filtered.length; i++) {
-                // setAllPrice(filtered[i].data)
-                // console.log(filtered[i].data[0].price);
+                setAllPrice(allPrice + (filtered[i].data[0].price * filtered[i].count))
             }
         }
     }
 
-    console.log(allPrice);
+    function removeAll() {
+        setProductsCon([])
+        setAllPrice(0)
+    }
+
 
     return (
         <nav className="navbar navbar-expand-md bg-dark">
@@ -62,33 +66,35 @@ export default function Navbar() {
                         }} >EARPHONES</Link></li>
                     </ul>
                     <div className="dropdown">
-                        <img src={chest} alt="" />
-                        <div className="dropdown-content" onClick={() => prices()} >
+                        <img src={chest} onClick={() => prices()} alt="" />
+                        <div className="dropdown-content"  >
                             {
                                 filtered.length > 0 ?
                                     <>
-                                        <h5 >CART ({filtered.length})    <span onClick={() => setProductsCon([])}>Remove All</span></h5>
+                                        <h5 >CART ({filtered.length})    <span className='remove' onClick={() => removeAll()}>Remove All</span></h5>
                                         {filtered.map(post => {
                                             return (
-                                                <div className='card p-1 row'>
-                                                    <div className="col-6">
+                                                <div className='row p-1 '>
+                                                    <div className="col">
                                                         <img src={post.data[0].image.mobile} width='50' alt="" />
-                                                        <h5>{post.data[0].name}</h5>
-                                                        <h5>${post.data[0].price}</h5>
+                                                        <div>
+                                                            <p>{post.data[0].name}</p>
+                                                            <p style={{ color: 'gray' }}>${post.data[0].price}</p>
+                                                        </div>
                                                     </div>
-                                                    <div className="col-6">
-                                                        <h6>{post.count}</h6>
-                                                        {
-                                                            // console.log(post.data[0].price * post.count)
-                                                            // setAllPrice(allPrice = allPrice + (post.data[0].price * post.count))
-                                                        }
+                                                    <div className="col navbarPrice">
+                                                        <p>{post.count}</p>
                                                     </div>
                                                 </div>
                                             )
                                         })}
+                                        <div className="total">
+                                            <h6>${allPrice}</h6>
+                                            <button>CHECK OUT</button>
+                                        </div>
                                     </>
                                     :
-                                    <h1>Hechnarsa tanlanmagan...</h1>
+                                    <h3>Hechnarsa tanlanmagan...</h3>
                             }
                         </div>
                     </div>
