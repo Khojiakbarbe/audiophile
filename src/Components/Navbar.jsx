@@ -73,7 +73,7 @@ export default function Navbar() {
                                         <h5 >CART ({filtered.length})    <span className='remove' onClick={() => removeAll()}>Remove All</span></h5>
                                         {filtered.map((post, ind) => {
                                             return (
-                                                <div className='row p-1 '>
+                                                <div key={ind} className='row p-1 '>
                                                     <div className="col">
                                                         <img src={post.data[0].image.mobile} width='50' alt="" />
                                                         <div>

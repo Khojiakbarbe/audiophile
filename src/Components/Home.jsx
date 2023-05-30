@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import axios from "axios"
 import { categoryContext } from "./DataProvider/DataContext"
 import { useNavigate } from 'react-router-dom'
-import {BiChevronRight} from 'react-icons/bi'
+import { BiChevronRight } from 'react-icons/bi'
 
 import carousel from '../images/home/Bitmap.png'
 import speaker1 from '../images/home/speakerZX9.png'
@@ -22,7 +22,7 @@ export default function Home() {
             .catch(err => console.log(err))
     }, [])
 
-    const [categoryCon, setCategoryCon] = useContext(categoryContext)
+    const [categoryCon, setCategoryCon] = useContext(categoryContext);
 
     return (
         <>
@@ -55,7 +55,7 @@ export default function Home() {
                                         <h6 onClick={() => {
                                             setCategoryCon(post.category);
                                             navigate('/category')
-                                        }}>SHOP <BiChevronRight style={{color:'#D87D4A'}}/></h6>
+                                        }}>SHOP <BiChevronRight style={{ color: '#D87D4A' }} /></h6>
                                     </div>
                                 </div>
                             )
