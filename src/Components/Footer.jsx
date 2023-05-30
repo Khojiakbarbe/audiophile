@@ -20,7 +20,7 @@ export default function Footer() {
                     <p>Copyright 2021. All Rights Reserved</p>
                 </div>
                 <div className="col-md-6">
-                    <ul className="nav col-12 col-lg-auto me-lg-auto  mb-2 justify-content-center mb-md-0" style={{ width: '60%' }}>
+                    <ul className="nav col-12 col-lg-auto me-lg-auto  mb-2 justify-content-center mb-md-0" >
                         <li><Link to='/' className="nav-link px-2  navbarLinks" >HOME</Link></li>
                         <li><Link to='/category' className="nav-link px-2  navbarLinks" onClick={() => {
                             setName('headphones')

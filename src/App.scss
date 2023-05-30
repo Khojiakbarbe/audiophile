@@ -2,7 +2,10 @@
 *a {
   color: white;
 }
-
+*a:hover{
+  color: #D87D4A !important;
+  transition: 300ms;
+}
 .navbar div {
   padding-left: 5%;
   padding-right: 5%;
@@ -172,8 +175,8 @@
 }
 
 .card h6:hover {
-  color: #D87D4A;
   transition: 0.5s;
+  color: #D87D4A;
   cursor: pointer;
 }
 
@@ -196,15 +199,14 @@
 .zx9 .seeProduct {
   background-color: black;
   color: white;
-  // border-radius: 5px;
   padding: 5%;
   padding-top: 1%;
   padding-bottom: 1%;
+  transition: 0.5s;
 }
 
 .zx9 .seeProduct:hover {
   background-color: #4C4C4C;
-  transition: 0.5s;
 }
 
 .zx7Text {
@@ -221,12 +223,12 @@
 
 .seeProduct {
   background-color: #F1F1F1;
+  transition: 0.5s;
 }
 
 .seeProduct:hover {
   background-color: black;
   color: white;
-  transition: 0.5s;
 }
 
 
@@ -285,11 +287,11 @@
   border: none;
   background-color: #D87D4A;
   color: white;
+  transition: 300ms;
 }
 
 .seeAndAddToCard:hover {
   background-color: #FBAF85;
-  transition: 0.5s;
 }
 
 /////// FOOTER \\\\\\\
@@ -317,6 +319,11 @@
 .icon {
   font-size: 200%;
   color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.icon:hover{
+  color: #D87D4A;
 }
 
 
