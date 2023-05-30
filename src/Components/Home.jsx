@@ -52,10 +52,10 @@ export default function Home() {
                                     <div className="card">
                                         <img src={post.image.desktop} className='img-fluid' alt="" />
                                         <p>{post.category}</p>
-                                        <span onClick={() => {
+                                        <h6 onClick={() => {
                                             setCategoryCon(post.category);
                                             navigate('/category')
-                                        }}>shop <BiChevronRight/></span>
+                                        }}>SHOP <BiChevronRight style={{color:'#D87D4A'}}/></h6>
                                     </div>
                                 </div>
                             )
