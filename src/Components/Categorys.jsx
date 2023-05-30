@@ -72,7 +72,7 @@ export default function Categorys() {
                                         <div className="col-md-6 pt-5">
                                             <h1>{post.name}</h1>
                                             <p>{post.description}</p>
-                                            <button className="seeProductCategory" onClick={() => navigate(`/category/${post.id}`)}>SEE PRODUCT</button>
+                                            <button className="seeAndAddToCard" onClick={() => navigate(`/category/${post.id}`)}>SEE PRODUCT</button>
                                         </div>
                                         <div className="col-md-6">
                                             <img src={post.image.desktop} alt="" />
@@ -86,7 +86,7 @@ export default function Categorys() {
                                         <div className="col-md-6 pt-5">
                                             <h1>{post.name}</h1>
                                             <p>{post.description}</p>
-                                            <button className="seeProductCategory" onClick={() => navigate(`/category/${post.id}`)}>SEE PRODUCT</button>
+                                            <button className="seeAndAddToCard" onClick={() => navigate(`/category/${post.id}`)}>SEE PRODUCT</button>
                                         </div>
                                     </div>
                             }

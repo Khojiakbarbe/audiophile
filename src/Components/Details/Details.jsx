@@ -25,13 +25,8 @@ export default function Details() {
 
     const [products, setProducts] = useContext(productsContext);
 
-    // const [mycount,setCounts] = useState(0)
     const [count, setCount] = useState(0);
 
-    // let a = 0;
-    // if (filter.length == 1) {
-    //     a = filter[0].count
-    // };
 
 
     function addCard() {
@@ -69,7 +64,7 @@ export default function Details() {
                             <p style={{ display: 'flex', justifyContent: 'space-around', backgroundColor: '#F1F1F1' }}><span className="btn" onClick={() => { count != 0 ? setCount(count - 1) : setCount(0) }}>-</span><span>{count}</span><span className="btn" onClick={() => setCount(count + 1)}>+</span></p>
                         </div>
                         <div className="col-md-8">
-                            <button onClick={() => addCard()} className="btn btn-warning">ADD TO CARD</button>
+                            <button onClick={() => addCard()} className="seeAndAddToCard">ADD TO CARD</button>
                         </div>
                     </div>
                 </div>

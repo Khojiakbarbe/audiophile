@@ -31,7 +31,6 @@ export default function Navbar() {
 
     const [allPrice, setAllPrice] = useState(0);
     function prices() {
-        // setAllPrice(0)
         if (filtered.length > 0) {
             for (let i = 0; i < filtered.length; i++) {
                 setAllPrice(allPrice + (filtered[i].data[0].price * filtered[i].count))
@@ -72,7 +71,7 @@ export default function Navbar() {
                                 filtered.length > 0 ?
                                     <>
                                         <h5 >CART ({filtered.length})    <span className='remove' onClick={() => removeAll()}>Remove All</span></h5>
-                                        {filtered.map(post => {
+                                        {filtered.map((post, ind) => {
                                             return (
                                                 <div className='row p-1 '>
                                                     <div className="col">
@@ -82,8 +81,8 @@ export default function Navbar() {
                                                             <p style={{ color: 'gray' }}>${post.data[0].price}</p>
                                                         </div>
                                                     </div>
-                                                    <div className="col navbarPrice">
-                                                        <p>{post.count}</p>
+                                                    <div className="col navbarCount">
+                                                        <p><span onClick={() => { filtered[ind].count > 0 ? filtered[ind].count-- : filtered[ind].count = 0 }}>-</span>{post.count} <span onClick={() => filtered[ind].count++}>+</span></p>
                                                     </div>
                                                 </div>
                                             )

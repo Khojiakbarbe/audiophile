@@ -22,7 +22,6 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  cursor: pointer;
 }
 
 .dropdown-content {
@@ -51,12 +50,37 @@
   margin-right: 2%;
   border-radius: 8px;
 }
-.navbarPrice p{
+
+.remove{
+  position: absolute;
+  left: 50%;
+  font-size: 80%;
+  opacity: 0.5;
+  font-weight:300;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.remove:hover{
+  transition: 300ms;
+  color: #D87D4A;
+}
+.navbarCount p{
   width: 50%;
   margin: 0 auto;
   background-color: #F1F1F1;
   text-align: center;
   padding: 2%;
+  display: flex;
+  justify-content: space-around;
+}
+.navbarCount span{
+  width: 20%;
+  cursor: pointer;
+  font-size: 150%;
+}
+.navbarCount span:hover{
+  color: #D87D4A;
+  transition: 0.5s;
 }
 
 .total h6::before{
@@ -78,14 +102,9 @@
   font-size: 120%;
   font-weight: 500;
 }
-
-.remove{
-  position: absolute;
-  left: 50%;
-  font-size: 80%;
-  opacity: 0.5;
-  font-weight:300;
-  text-decoration: underline;
+.total button:hover{
+  transition: 0.5s;
+  background-color: #FBAF85;
 }
 
 @media only screen and (max-width: 990px) {
@@ -114,20 +133,6 @@
 
 
 
-.seeProductCategory {
-  border-radius: 4px;
-  color: white;
-  background: #D87D4A;
-  padding: 3%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  border: none;
-}
-
-.seeProductCategory:hover {
-  background-color: #FBAF85;
-  transition: 0.5s;
-}
 
 
 .myCarousel .row .col-md-6:nth-child(1) {
@@ -263,8 +268,16 @@
   width: 90%;
 }
 
-
-
+.seeAndAddToCard{
+  padding: 8px 35px;
+  border: none;
+  background-color: #D87D4A;
+  color: white;
+}
+.seeAndAddToCard:hover{
+  background-color: #FBAF85;
+  transition: 0.5s;
+}
 
 /////// FOOTER \\\\\\\
 
