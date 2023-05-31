@@ -32,9 +32,11 @@ export default function Navbar() {
     const [allPrice, setAllPrice] = useState(0);
     function prices() {
         if (filtered.length > 0) {
+            let prices = 0;
             for (let i = 0; i < filtered.length; i++) {
-                setAllPrice(allPrice + (filtered[i].data[0].price * filtered[i].count))
+                prices += filtered[i].data[0].price * filtered[i].count;
             }
+            setAllPrice(prices)
         }
     }
 
