@@ -45,7 +45,14 @@ export default function Navbar() {
         setAllPrice(0)
     }
 
+    // aa.addEventListener('click', function(){
+    // })
 
+    function addClass() {
+        const aa = document.querySelector('.dropdownAdd');
+        aa.classList.add('dropdown')
+        console.log(aa);
+    }
     return (
         <nav className="navbar navbar-expand-md bg-dark">
             <div className="container-fluid">
@@ -66,7 +73,7 @@ export default function Navbar() {
                             setName('earphones')
                         }} >EARPHONES</Link></li>
                     </ul>
-                    <div className="dropdown">
+                    <div onClick={() => addClass()} className="dropdownAdd">
                         <img src={chest} onClick={() => prices()} alt="" />
                         <div className="dropdown-content"  >
                             {
@@ -95,7 +102,7 @@ export default function Navbar() {
                                         </div>
                                     </>
                                     :
-                                    <h3>Hechnarsa tanlanmagan...</h3>
+                                    <h5>Hechnarsa tanlanmagan...</h5>
                             }
                         </div>
                     </div>
