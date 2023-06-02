@@ -11,7 +11,7 @@ export default function Checkout() {
         <div className="container pt-5 pb-5">
             <p onClick={() => navigate(-1)} className='btn'>Go Back</p>
             <div className="row">
-                <div className="col-8 border">
+                <div className="col-8 border pb-5">
                     <h1>CHECKOUT</h1>
                     <h5>BILLING DETAILS</h5>
                     <div className="row mb-3">
@@ -52,6 +52,27 @@ export default function Checkout() {
                             <input type="text" id='name' placeholder='United States' className='form-control mt-2 p-3' />
                         </div>
                     </div>
+
+                    <h5>PAYMENT DETAILS</h5>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <p><strong>Payemnt Method</strong></p>
+                        </div>
+                        <div className="col-md-6">
+                            <input type="checkbox" className="form-control p-3" placeholder='e-Money' />
+                            <br />
+                            <input type="checkbox" className="form-control p-3" placeholder='Cash on Delivery' />
+                        </div>
+                        <div className="col-md-6">
+                            <label htmlFor="e-Money"><strong>e-Money</strong></label>
+                            <input type="text" id='e-Money' placeholder='238521993' className='form-control p-3' />
+                        </div>
+                        <div className="col-md-6">
+                            <label htmlFor="e-MoneyPin"><strong>e-Money PIN</strong></label>
+                            <input type="text" id='e-MoneyPin' placeholder='6891' className='form-control p-3' />
+                        </div>
+                    </div>
+
                 </div>
                 <div className="col-4">
                     <h3>SUMMARY</h3>
