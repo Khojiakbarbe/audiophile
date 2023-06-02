@@ -7,6 +7,7 @@ import { CategoryProvider, ProductsProvider } from './Components/DataProvider/Da
 import Details from './Components/Details/Details';
 
 import './App.scss';
+import Checkout from './Components/Checkout';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/category' element={<Categorys />} />
             <Route path='/category/:id' element={<Details />} />
+            <Route path='/checkout' element={<Checkout />} />
           </Routes>
           <Footer />
         </ProductsProvider>

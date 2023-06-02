@@ -1,11 +1,14 @@
-import { Link } from 'react-router-dom'
-import chest from '../images/navbar/chest.png'
-
+import { Link, useNavigate } from 'react-router-dom'
 import { useContext, useState, useEffect } from 'react';
 import { categoryContext, productsContext } from './DataProvider/DataContext';
 import axios from 'axios'
 
+import chest from '../images/navbar/chest.png'
+
+
 export default function Navbar() {
+
+    const navigate = useNavigate();
 
     const [name, setName] = useContext(categoryContext)
 
@@ -19,6 +22,7 @@ export default function Navbar() {
             })
             .catch(err => console.log(err))
     }, [])
+
     const filtered = [];
     if (productsCon.length > 0) {
         for (let i = 0; i < productsCon.length; i++) {
@@ -66,7 +70,7 @@ export default function Navbar() {
                             setName('earphones')
                         }} >EARPHONES</Link></li>
                     </ul>
-                    <div  className="dropdown">
+                    <div className="dropdown">
                         <img src={chest} onClick={() => prices()} alt="" />
                         <div className="dropdown-content"  >
                             {
@@ -91,7 +95,7 @@ export default function Navbar() {
                                         })}
                                         <div className="total">
                                             <h6>${allPrice}</h6>
-                                            <button>CHECK OUT</button>
+                                            <button onClick={() => navigate('/checkout', {state: filtered })}>CHECK OUT</button>
                                         </div>
                                     </>
                                     :
