@@ -7,26 +7,6 @@ export default function Checkout() {
 
     const state = useLocation();
 
-    // const filtered = [];
-    // if (productsCon.length > 0) {
-    //     for (let i = 0; i < productsCon.length; i++) {
-    //         const filter = data.filter(find => find.id == productsCon[i].id)
-    //         if (filter) {
-    //             filtered.push({ data: filter, count: productsCon[i].count })
-    //         }
-    //     }
-    // }
-
-    // const [allPrice, setAllPrice] = useState(0);
-    // function prices() {
-    //     if (filtered.length > 0) {
-    //         let prices = 0;
-    //         for (let i = 0; i < filtered.length; i++) {
-    //             prices += filtered[i].data[0].price * filtered[i].count;
-    //         }
-    //         setAllPrice(prices)
-    //     }
-    // }
 
     let total = 0;
     state.state.forEach(element => {
