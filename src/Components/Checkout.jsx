@@ -13,7 +13,7 @@ export default function Checkout() {
             <div className="row">
                 <div className="col-8 border pb-5">
                     <h1>CHECKOUT</h1>
-                    <h5>BILLING DETAILS</h5>
+                    <h5 className='checkoutH5'>BILLING DETAILS</h5>
                     <div className="row mb-3">
                         <div className="col-md-6 mb-2">
                             <label htmlFor="name"><strong>Name</strong></label>
@@ -32,10 +32,10 @@ export default function Checkout() {
                         </div>
                     </div>
 
-                    <h5>SHIPPING INFO</h5>
+                    <h5 className='checkoutH5'>SHIPPING INFO</h5>
                     <label htmlFor="adress"><strong>Adress</strong></label>
                     <input type="text" placeholder='1137 Williams Avenue' className='form-control p-3 mb-4 mt-3' id="adress" />
-                    <div className="row">
+                    <div className="row mb-5">
                         <div className="col-md-6 mb-2">
                             <label htmlFor="name"><strong>ZIP Code</strong></label>
                             <br />
@@ -53,7 +53,7 @@ export default function Checkout() {
                         </div>
                     </div>
 
-                    <h5>PAYMENT DETAILS</h5>
+                    <h5 className='checkoutH5'>PAYMENT DETAILS</h5>
                     <div className="row">
                         <div className="col-md-6">
                             <p><strong>Payemnt Method</strong></p>
@@ -94,6 +94,9 @@ export default function Checkout() {
                             </div>
                         )
                     })}
+                    <div className='text-center'>
+                    <button className='seeAndAddToCard'>CONTINUE & PAY</button>
+                    </div>
                 </div>
             </div>
         </div>
