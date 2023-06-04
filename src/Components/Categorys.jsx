@@ -33,27 +33,6 @@ export default function Categorys() {
     }
 
 
-    //// not working
-    // const allCategorys = [];
-
-    // for (let i = 0; i < info.length; i++) {
-    //     if (allCategorys.length == 0) {
-    //         allCategorys.push(info[i])
-    //     } else {
-    //         console.log(allCategorys[0].category);
-    //         for (let e = 0; e < allCategorys.length; e++) {
-    //             if (allCategorys[e].category !== info[i].category) {
-    //                 allCategorys.push(info[i].category)
-    //                 e++;
-    //                 console.log(allCategorys[e]);
-    //             }
-    //         }
-    //     }
-
-    // }
-    // console.log(allCategorys);
-
-
     return (
         <>
             <div className="category">
@@ -69,6 +48,12 @@ export default function Categorys() {
 
                                     <div className="row categoryRow mb-5">
                                         <div className="col-md-6 pt-5">
+                                            {
+                                                post.new ?
+                                                    <h6 style={{ color: '#D87D4A' }}>N E W  P R O D U C T</h6>
+                                                    :
+                                                    null
+                                            }
                                             <h1>{post.name}</h1>
                                             <p>{post.description}</p>
                                             <button className="seeAndAddToCard" onClick={() => navigate(`/category/${post.id}`)}>SEE PRODUCT</button>
@@ -83,6 +68,12 @@ export default function Categorys() {
                                             <img src={post.image.desktop} alt="" />
                                         </div>
                                         <div className="col-md-6 pt-5">
+                                            {
+                                                post.new ?
+                                                    <h6 style={{ color: '#D87D4A' }}>N E W  P R O D U C T</h6>
+                                                    :
+                                                    null
+                                            }
                                             <h1>{post.name}</h1>
                                             <p>{post.description}</p>
                                             <button className="seeAndAddToCard" onClick={() => navigate(`/category/${post.id}`)}>SEE PRODUCT</button>
@@ -102,7 +93,7 @@ export default function Categorys() {
                                         <div className="card">
                                             <img src={post.image.desktop} style={{ width: '60%', margin: '0 auto' }} alt="" />
                                             <p>{post.category}</p>
-                                            <span style={{cursor:'pointer'}} onClick={() => {
+                                            <span style={{ cursor: 'pointer' }} onClick={() => {
                                                 setCategory(post.category)
                                                 navigate('/category')
                                             }}>shop </span>
