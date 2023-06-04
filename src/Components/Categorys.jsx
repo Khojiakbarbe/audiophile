@@ -33,7 +33,6 @@ export default function Categorys() {
     }
 
 
-
     //// not working
     // const allCategorys = [];
 

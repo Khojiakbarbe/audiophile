@@ -58,10 +58,15 @@ export default function Checkout() {
                         <div className="col-md-6">
                             <p><strong>Payemnt Method</strong></p>
                         </div>
-                        <div className="col-md-6">
-                            <input type="checkbox" className="form-control p-3" placeholder='e-Money' />
-                            <br />
-                            <input type="checkbox" className="form-control p-3" placeholder='Cash on Delivery' />
+                        <div className="col-md-6 mb-5">
+                            <div className='mb-3 p-2'>
+                                <input type="radio" id='e-moneyR' name='payMethod' className="payMetRadio" placeholder='e-Money' />
+                                <label htmlFor="e-moneyR">e-Money</label>
+                            </div>
+                            <div >
+                                <input type="radio" id='cashDeliveryR' className="payMetRadio" name='payMethod' placeholder='Cash on Delivery' />
+                                <label htmlFor="cashDeliveryR">Cash on Delivery</label>
+                            </div>
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="e-Money"><strong>e-Money</strong></label>
@@ -95,7 +100,7 @@ export default function Checkout() {
                         )
                     })}
                     <div className='text-center'>
-                    <button className='seeAndAddToCard'>CONTINUE & PAY</button>
+                        <button className='seeAndAddToCard'>CONTINUE & PAY</button>
                     </div>
                 </div>
             </div>
