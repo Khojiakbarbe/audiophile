@@ -356,13 +356,15 @@ body {
   vertical-align: middle;
   position: absolute;
 }
-#total{
+
+#total {
   font-weight: 500;
   font-size: 150%;
   line-height: 25px;
   text-align: end;
   position: relative;
 }
+
 #total::before {
   position: absolute;
   left: 10%;
@@ -376,13 +378,16 @@ body {
   mix-blend-mode: normal;
   opacity: 0.5;
 }
- .PhoneInputCountry {
+
+///// Phone number
+.PhoneInputCountry {
   opacity: 0;
   width: 0;
 }
+
 .PhoneInputInput {
   border: none;
-  outline-color:white;
+  outline-color: white;
 }
 
 /////// FOOTER \\\\\\\
