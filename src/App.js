@@ -6,9 +6,9 @@ import Categorys from './Components/Categorys';
 import { CategoryProvider, ProductsProvider } from './Components/DataProvider/DataContext'
 import Details from './Components/Details/Details';
 
-import './App.scss';
 import Checkout from './Components/Checkout';
 
+import './App.scss';
 
 function App() {
   return (
