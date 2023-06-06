@@ -338,15 +338,7 @@ body {
 }
 
 .payMetRadio:checked+label {
-  background: #FFFFFF;
   border: 1px solid #D87D4A;
-  border-radius: 8px;
-  cursor: pointer;
-  position: relative;
-  padding: 1%;
-  left: -2%;
-  padding-left: 8%;
-  width: 100%;
 }
 
 .payMetRadio {
@@ -389,6 +381,43 @@ body {
   border: none;
   outline-color: white;
 }
+
+
+
+/// MODAL
+.modalDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: #9191916f;
+}
+
+.myModal {
+  background: #FFFFFF;
+  border-radius: 8px;
+  width: 30%;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+.img-text{
+  padding: 2%;
+  background-color: #CFCFCF;
+}
+.img-text img{
+  width: 30%;
+  float: left;
+  margin-right: 2%;  
+}
+.howMuch{
+  position: relative;
+  left: 60%;
+}
+
 
 /////// FOOTER \\\\\\\
 
