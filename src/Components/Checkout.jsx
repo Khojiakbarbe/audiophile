@@ -50,7 +50,7 @@ export default function Checkout() {
                                             <>
                                                 {state.state.map((post, ind) => {
                                                     return (
-                                                        <div key={ind} className="">
+                                                        <div key={ind} >
                                                             <img src={post.data[0].image.mobile} alt="" />
                                                             <span className='howMuch'><strong>x{post.count}</strong></span>
                                                             <br />
@@ -64,7 +64,7 @@ export default function Checkout() {
                                             <>
                                                 {state.state.slice(0, slice).map((post, ind) => {
                                                     return (
-                                                        <div key={ind} className="">
+                                                        <div key={ind} >
                                                             <img src={post.data[0].image.mobile} alt="" />
                                                             <span className='howMuch'><strong>x{post.count}</strong></span>
                                                             <br />
@@ -78,10 +78,10 @@ export default function Checkout() {
                                             </>
                                     }
                                 </div>
-                                <div className="col-sm" >
-                                    <div className="bg-dark p-2" style={{ color: 'white' }}>
-                                    <p style={{ color: 'gray' }}>GRAND TOTAL</p>
-                                    <h4><strong>${total}</strong></h4>
+                                <div className="col" >
+                                    <div className="bg-dark p-2 " style={{ color: 'white' }}>
+                                        <p style={{ color: 'gray' }}>GRAND TOTAL</p>
+                                        <h4><strong>${total}</strong></h4>
                                     </div>
                                 </div>
                             </div>

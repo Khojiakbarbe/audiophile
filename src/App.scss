@@ -401,12 +401,14 @@ body {
   border-radius: 8px;
   width: 30%;
   margin: 0 auto;
+  margin-top: 3%;
   padding: 2%;
 }
 
 .img-text{
   padding: 2%;
   background-color: #CFCFCF;
+  border-radius: 10px;
 }
 .img-text img{
   width: 30%;
@@ -418,6 +420,9 @@ body {
   left: 60%;
 }
 
+#otherItems{
+  cursor: pointer;
+}
 
 /////// FOOTER \\\\\\\
 
