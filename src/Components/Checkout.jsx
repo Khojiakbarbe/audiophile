@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+import { useState } from 'react';
 
 export default function Checkout() {
 
@@ -7,6 +9,9 @@ export default function Checkout() {
 
     const state = useLocation();
 
+    const [phone, setPhone] = useState();
+
+    console.log(phone);
 
     let total = 0;
     state.state.forEach(element => {
@@ -34,7 +39,13 @@ export default function Checkout() {
                             <div className="col-md-6 mb-2">
                                 <label htmlFor="name"><strong>Phone Number</strong></label>
                                 <br />
-                                <input type="Number" id='name' placeholder='+1 202-555-0136' className='form-control mt-2 p-3' />
+                                <PhoneInput
+                                    className='form-control phoneNumber'
+                                    placeholder="+1 202-555-0136"
+                                    value={phone}
+                                    onChange={setPhone}
+                                />
+                                {/* <input type="Number" id='name' placeholder='+1 202-555-0136' className='form-control mt-2 p-3' /> */}
                             </div>
                         </div>
 
