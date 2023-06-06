@@ -27,6 +27,12 @@ export default function Checkout() {
     function showModal() {
         setModal('')
         setSlice(1)
+        document.querySelector('body').style.overflow = 'hidden'
+    }
+    
+    function backHome(){
+        document.querySelector('body').style.overflow = 'scroll'
+        setModal('hide')
     }
 
     function otherItems() {
@@ -85,7 +91,7 @@ export default function Checkout() {
                                     </div>
                                 </div>
                             </div>
-                            <button className='seeAndAddToCard w-100 mt-5' onClick={() => setModal('hide')}>BACK TO HOME</button>
+                            <button className='seeAndAddToCard w-100 mt-5' onClick={() => backHome()}>BACK TO HOME</button>
                         </div>
                     </div>
                     :
