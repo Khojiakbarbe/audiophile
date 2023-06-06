@@ -26,7 +26,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="myCarousel">
+            <div className="entry">
                 <div className="row">
                     <div className="col-md-6">
                         <h5>NEW PRODUCT</h5>

@@ -134,14 +134,14 @@ body {
 
 
 //// HOME \\\\
-.myCarousel {
+.entry {
   background-color: #0E0E0E;
   padding: 5%;
   height: 100vh;
   margin-bottom: 5%;
 }
 
-.myCarousel .row {
+.entry .row {
   width: 80%;
   margin: 0 auto;
   color: white;
@@ -151,31 +151,31 @@ body {
 
 
 
-.myCarousel .row .col-md-6:nth-child(1) {
+.entry .row .col-md-6:nth-child(1) {
   padding-top: 5%;
 }
 
-.myCarousel .row h5 {
+.entry .row h5 {
   color: gray;
   font-size: 150%;
 }
 
 
-.myCarousel .row img {
+.entry .row img {
   width: 100%;
 }
 
 @media only screen and (max-width: 880px) {
 
-  .myCarousel .row .col-md-6:nth-child(2) {
+  .entry .row .col-md-6:nth-child(2) {
     text-align: center;
   }
 
-  .myCarousel .row h1 {
+  .entry .row h1 {
     font-size: 150%;
   }
 
-  .myCarousel .row img {
+  .entry .row img {
     width: 70%;
     margin-bottom: 10%;
   }
