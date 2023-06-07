@@ -394,9 +394,6 @@ body {
   bottom: 0;
   z-index: 5;
   background-color: #9191916f;
-  overflow: scroll;
-  padding-top: 5%;
-  padding-bottom: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -406,13 +403,25 @@ body {
   background: #FFFFFF;
   border-radius: 8px;
   width: 30%;
-  padding: 2%;
+  padding: 3%;
   position: fixed;
   bottom: 10%;
   top: 10%;
   z-index: 50;
   overflow-y: scroll;
 }
+@media only screen and (max-width: 991px) {
+  .myModal {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 491px) {
+  .myModal {
+    width: 60%;
+  }
+}
+
 
 .img-text {
   padding: 2%;
