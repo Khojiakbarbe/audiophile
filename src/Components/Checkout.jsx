@@ -32,6 +32,7 @@ export default function Checkout() {
     
     function backHome(){
         document.querySelector('body').style.overflow = 'scroll'
+        document.querySelector('body').style.overflowX = 'hidden'
         setModal('hide')
     }
 
@@ -49,7 +50,7 @@ export default function Checkout() {
                             <img src={img} className='img-fluid mb-3' alt="" />
                             <h1>THANK YOU  FOR YOUR ORDER</h1>
                             <p>You will receive an email confirmation shortly.</p>
-                            <div className="row">
+                            <div className="row w-100">
                                 <div className="col-md-7 img-text">
                                     {
                                         state.state.length == 1 ?
@@ -105,7 +106,7 @@ export default function Checkout() {
                         <div className="cards">
                             <h1>CHECKOUT</h1>
                             <h5 className='checkoutH5'>BILLING DETAILS</h5>
-                            <div className="row mb-3">
+                            <div className="row w-100 mb-3">
                                 <div className="col-md-6 mb-2">
                                     <label htmlFor="name"><strong>Name</strong></label>
                                     <br />
@@ -131,7 +132,7 @@ export default function Checkout() {
                             <h5 className='checkoutH5'>SHIPPING INFO</h5>
                             <label htmlFor="adress"><strong>Adress</strong></label>
                             <input type="text" placeholder='1137 Williams Avenue' className='form-control p-3 mb-4 mt-3' id="adress" />
-                            <div className="row mb-5">
+                            <div className="row w-100 mb-5">
                                 <div className="col-md-6 mb-2">
                                     <label htmlFor="name"><strong>ZIP Code</strong></label>
                                     <br />
